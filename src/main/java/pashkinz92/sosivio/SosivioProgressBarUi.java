@@ -1,4 +1,4 @@
-package pronskiy.elephpant;
+package pashkinz92.sosivio;
 
 import com.intellij.openapi.ui.GraphicsConfig;
 import com.intellij.ui.Gray;
@@ -17,20 +17,20 @@ import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.geom.*;
 
-import static pronskiy.elephpant.ElephpantIcons.ICON;
+import static pashkinz92.sosivio.SosivioIcons.ICON;
 
-public class ElephpantProgressBarUi extends BasicProgressBarUI {
+public class SosivioProgressBarUi extends BasicProgressBarUI {
     private static final float[] FRACTIONS = {0.5f, 1f};
-    private static final Color ELEPHPANT_COLOR_START = new JBColor(new Color(136, 146, 191), new Color(136, 146, 191));
-    private static final Color ELEPHPANT_COLOR_END = new JBColor(new Color(136, 146, 191, 255), new Color(136, 146, 191));
-    private static final Color[] COLORS = {ELEPHPANT_COLOR_START, ELEPHPANT_COLOR_END};
+    private static final Color COLOR_START = new JBColor(new Color(136, 146, 191), new Color(136, 146, 191));
+    private static final Color COLOR_END = new JBColor(new Color(136, 146, 191, 255), new Color(136, 146, 191));
+    private static final Color[] COLORS = {COLOR_START, COLOR_END};
     private static final JBColor SHADES_OF_GREY = new JBColor(Gray._240.withAlpha(50), Gray._128.withAlpha(50));
     private static final JBColor SHADES_OF_GREY2 = new JBColor(Gray._165.withAlpha(50), Gray._88.withAlpha(50));
 
     @SuppressWarnings({"MethodOverridesStaticMethodOfSuperclass", "UnusedDeclaration"})
     public static ComponentUI createUI(JComponent c) {
         c.setBorder(JBUI.Borders.empty().asUIResource());
-        return new ElephpantProgressBarUi();
+        return new SosivioProgressBarUi();
     }
 
     @Override
@@ -123,7 +123,7 @@ public class ElephpantProgressBarUi extends BasicProgressBarUI {
             g2d.fill(area);
         }
 
-        Icon icon = velocity > 0 ? (ElephpantIcons.ICON) : (ElephpantIcons.ICON_REVERSED) ;
+        Icon icon = velocity > 0 ? (SosivioIcons.ICON) : (SosivioIcons.ICON_REVERSED) ;
 
         g2d.draw(new RoundRectangle2D.Float(1f, 1f, w - 3f, h - 3f, JBUIScale.scale(8f), JBUIScale.scale(8f)));
         icon.paintIcon(progressBar, g2d, offset2 - JBUI.scale(10), -JBUI.scale(1));

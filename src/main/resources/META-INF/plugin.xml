@@ -1,5 +1,5 @@
 <idea-plugin require-restart="true">
-    <id>pronskiy.elephpant</id>
+    <id>pashkinz92.sosivio</id>
     <name>Elephpant Progress Bar</name>
     <vendor email="roman@pronskiy.com">Roman Pronskiy</vendor>
 
@@ -15,6 +15,6 @@ Florin Pățan. And inherits <a href="https://plugins.jetbrains.com/plugin/8575-
     <idea-version since-build="201"/>
 
     <applicationListeners>
-        <listener class="pronskiy.elephpant.ElephpantApplicationComponent" topic="com.intellij.ide.ui.LafManagerListener"/>
+        <listener class="pashkinz92.sosivio.SosivioApplicationComponent" topic="com.intellij.ide.ui.LafManagerListener"/>
     </applicationListeners>
 </idea-plugin>
